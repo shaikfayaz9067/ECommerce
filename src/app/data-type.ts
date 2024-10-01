@@ -1,50 +1,50 @@
-export interface signUp {
+export interface esignUp {
   name: string;
   email: string;
   password: string;
 }
-export interface login {
+export interface elogin {
   email: String;
   password: String;
 }
 
-export interface product{
-  name:string,
-  price:number,
-  category:string,
-  color:string,
-  image:string,
-  description:string,
-  id:number,
-  quantity:undefined | number,
-  productId:undefined|number
+export interface eproduct {
+  name: string;
+  price: number;
+  category: string;
+  color: string;
+  image: string;
+  description: string;
+  id: string;
+  quantity: number; // Make this optional to allow undefined
+  productId?: string;
 }
-export interface cart{
-  name:string,
-  price:number,
-  category:string,
-  color:string,
-  image:string,
-  description:string,
-  id:number| undefined,
-  quantity:undefined | number,
-  productId:number,
-  userId:number
-}
-
-export interface priceSummary{
-  price:number,
-  discount:number,
-  tax:number,
-  delivery:number,
-  total:number
+export interface ecart {
+  name: string;
+  price: number;
+  category: string;
+  color: string;
+  image: string;
+  description: string;
+  id?: string;
+  quantity: number;
+  productId: string;
+  userId: string;
 }
 
-export interface order {
-  email:string,
-  address:string,
-  contact:string,
-  totalPrice:number,
-  userId:string,
-  id:number|undefined
+export interface epriceSummary {
+  price: number;
+  discount: number;
+  tax: number;
+  delivery: number;
+  total: number;
+}
+
+export interface eorder {
+  email: string;
+  address: string;
+  contact: string;
+  totalPrice: number;
+  userId: string;
+  id: string | undefined;
 }

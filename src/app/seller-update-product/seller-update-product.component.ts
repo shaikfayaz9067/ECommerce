@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { product } from '../data-type';
+import { eproduct } from '../data-type';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./seller-update-product.component.css'],
 })
 export class SellerUpdateProductComponent implements OnInit {
-  productData: undefined | product;
+  productData: undefined | eproduct;
   productMessage: undefined | string;
   constructor(private route: ActivatedRoute, private product: ProductService) {}
 

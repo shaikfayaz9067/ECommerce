@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { product } from '../data-type';
+import { eproduct } from '../data-type';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class SellerAddProductComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submit(data: product) {
+  submit(data: eproduct) {
     this.product.addProduct(data).subscribe((result) => {
       console.warn(result);
       if (result) {
@@ -22,7 +22,7 @@ export class SellerAddProductComponent implements OnInit {
     });
 
     setTimeout(() => {
-      this.addProductMessage=undefined
+      this.addProductMessage = undefined;
     }, 3000);
   }
 }
